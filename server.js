@@ -28,7 +28,7 @@ var env = require("dotenv").load();
 var models = require("./app/models");
 
 //routes
-var authRoute = require("./app/routes/auth.js")(app);
+var authRoute = require("./app/routes/auth.js")(app, passport);
 
 require("./app/config/passport/passport.js")
 
