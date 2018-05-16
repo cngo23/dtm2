@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+.navbar{
+background-color: #25a890;
+font-family:"Roboto", sans-serif;
+}
+
+.panel-default{
+    background-color: #25a890;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    background: url(../assets/numbers.jpg) no-repeat center center fixed;
+    background-size: cover;
+}
+
+h1{
+    margin-bottom:15px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #f5e12a;
+    font-size:50px;
+    
+}
+
+h2{
+    margin-bottom:10px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #f5e12a;
+    font-size:40px;
+
+}
+
+.main-section {
+    margin: 0 auto;
+    margin-top: 90px;
+    padding: 0;
+}
+
+.modal-content{
+    background-color: #5bd6cc;
+    opacity: .94;
+    padding: 0 18px;
+    box-shadow: 0px 0px 3px #848484;
+}
+
+.user-img{
+    margin-top: -50px;
+    margin-bottom: 35px;
+}
+
+.user-img img{
+    height:100px;
+    width:100px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 2px #848484;
+}
+
+.form-group{
+    margin-bottom: 25px;
+}
+
+.form-group input{
+    height:42px;
+    border-radius: 5px;
+    border: 0;
+    font-size: 18px;
+    padding-left: 54px;
+}
+
+.form-group::before{
+    font-family:"Font Awesome\ 5 Free";
+    content: "\f007";
+    position: absolute;
+    font-size: 22px;
+    color:#848484;
+    left:28px;
+    padding-top: 4px;
+
+}
+
+.form-group:last-of-type::before{
+    content: "\f023";
+}
+
+button{
+    width:40%;
+    margin: 5px 0 25px;
+}
+
+.btn{
+    background-color: #f5e12a;
+    color: #007f96;
+    font-size: 19px;
+    padding: 7px 14px;
+    border-radius: 5px;
+    border-bottom: 4px solid #219882;
+}
+
+.btn:hover, .btn:focus {
+    background-color:#25a890 !important;
+    border-bottom: 4px solid #25a890 !important;
+}
+
+.svg-inline--fa{
+    font-size: 20px;
+    margin-right: 7px;
+}
+
+.forgot{
+    padding: 5px 0 25px;
+
+}
+.forgot a {
+    color: #25a890;
+}
+
+.review{
+
+    background-color: #fff;
+    color: #25a890;
+    padding-top:20px;
+
+    margin: 0 auto;
+
+    margin-top:-20px;
+
+    margin-left:30px;
+
+    box-shadow: 0px 0px 8px #848484;
+
+    opacity: .94;
+
+    padding: 0 18px;
+
+    border-radius: 5px;
+
+ 
+
+ 
+
+}
+
+ 
+
+h4{
+
+    color: #25a890;
+
+}
+
+ 
+
+.checked {
+
+    color: orange;
+
+}
