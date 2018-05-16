@@ -21,7 +21,14 @@ app.set("view engine", ".handlebars")
 
 app.use(session({secret:"dtmcat", resave: true, saveUninitialized:true})); //session secret
 app.use(passport.initialize());
-app.use(passport.session()); //persistent login sessions
+app.use(passport.session()); 
+
+//express to connect css to handlebars 
+
+app.use(express.static(path.join(__dirname, '/public')));
+
+
+//persistent login sessions
 
 var env = require("dotenv").load();
 
