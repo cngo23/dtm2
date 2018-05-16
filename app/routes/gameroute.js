@@ -3,8 +3,8 @@ var express = require('express');
 var router = express.Router();
 
 router.get('/', function(req, res){
-    let css = 'public\css\gameplay.css';
-    let js = 'public\js\gameplay.js';
+    let css = '/css/gameplay.css';
+    let js = '/js/gameplay.js';
     let links = {css: css, js: js}
     res.render('gameplay', links);
 })
