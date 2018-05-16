@@ -47,6 +47,9 @@ app.use(routes);
 //     console.log(err, "Something went wrong with the Database Update...")
 // });
 
+// var controllers = require("./app/controllers");
+
+
 app.listen(PORT, function () {
     console.log("Server listening on: http://localhost:" + PORT);
   });
