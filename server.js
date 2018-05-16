@@ -25,7 +25,7 @@ app.use(passport.session());
 
 //express to connect css to handlebars 
 
-app.use(express.static(path.join(__dirname, '/public')));
+app.use(express.static(__dirname + '/public'));
 
 
 //persistent login sessions
@@ -37,7 +37,7 @@ var models = require("./app/models");
 //routes
 var authRoute = require("./app/routes/auth.js")(app, passport);
 
-require("./app/config/passport/passport.js")
+require("./app/config/passport")(passport,models.user)
 
 models.sequelize.sync().then(function() {
     console.log("Database is all gravy");

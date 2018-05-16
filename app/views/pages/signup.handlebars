@@ -12,24 +12,17 @@
       <div class ="modal-content">
 
         
-
-        <form class="col-12">
-            <h1>Do The Math</h1>
-            <h2>Sign Up</h2>
-          <div class ="form-group">
-            <input type="text" class="form-control" placeholder="Enter Name">
-          </div>
-          <div class ="form-group">
-            <input type="text" class="form-control" placeholder="Enter Age">
-          </div>
-          <div class ="form-group">
-            <input type="text" class="form-control" placeholder="Enter Email">
-          </div>
-          <div class ="form-group">
-            <input type="password" class="form-control" placeholder="Enter Desired Password">
-          </div>
-          <button type ="submit" class="btn"><i class="fas fa-sign-in-alt"></i>Create Account</button>
-        </form>
+<form id="signup" name="signup" method="post" action="/signup">
+        <label for="email">Email Address</label>
+        <input class="text" name="email" type="email" />
+        <label for="firstname">Firstname</label>
+        <input name="firstname" type="text" />
+        <label for="lastname">Lastname</label>
+        <input name="lastname" type="text" />
+        <label for="password">Password</label>
+        <input name="password" type="password" />
+        <input class="btn" type="submit" value="Sign Up" />
+    </form>
 
        
 
