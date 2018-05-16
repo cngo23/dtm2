@@ -14,6 +14,7 @@ module.exports = function (passport, user) {
         function (req, email, password, done) {
             var generateHash = function (password) {
                 return bCrypt.hashSync(password, bCrypt.genSaltSync(8), null);
+                    };
                 User.findOne({
                     where: {
                         email: email
@@ -44,8 +45,8 @@ module.exports = function (passport, user) {
                     }
                 })
             }
-        }
     ));
+
 
     //log in
     passport.use("local-login", new LocalStrategy (
@@ -55,11 +56,13 @@ module.exports = function (passport, user) {
         passReqToCallback: true
     },
 
+
     function(req, email, password, done) {
         var User = user;
-        var isValidPassword = function(userpass, password){
+        var isValidPass = function(userpass, password){
             return bCrypt.compareSync(password, userpass);
         }
+
         User.findOne({
             where: {
                 email: email
@@ -77,7 +80,6 @@ module.exports = function (passport, user) {
             }
             var userinfo = user.get();
             return done(null, userinfo);
-
         }).catch(function(err) {
             console.log("Error: ", err);
             return done(null, false, {
@@ -85,16 +87,16 @@ module.exports = function (passport, user) {
             });
         })
     }
-))
+));
 
     //serialize
     passport.serializeUser(function (user, done) {
-        done(null, user.id);
+        done(null, user.user_id);
     });
 
     // deserialize user 
-    passport.deserializeUser(function (id, done) {
-        User.findById(id).then(function (user) {
+    passport.deserializeUser(function (user_id, done) {
+        User.findById(user_id).then(function (user) {
             if (user) {
                 done(null, user.get());
             } else {
