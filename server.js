@@ -1,29 +1,40 @@
-const express = require("express");
-const path =  require("path");
-const bodyParser = require("body-parser");
-const connection = require("./config/config.json");
-const routes = require("./controllers/dtmcontroller.js");
+var express = require("express");
+var Sequelize = require("sequelize");
+
+var bodyParser = require("body-parser");
+var passport = require("passport");
+var session = require("express-session")
+// var connection = require("./config/config.json");
+// var routes = require("./controllers/dtmcontroller.js");
 
 var app = express();
+var PORT = process.env.PORT || 4242;
+
 var exphbs = require("express-handlebars");
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
-app.use("/", routes)
-app.use(express.static(path.join(__dirname, "public")));
 
-// app.set("views", path.join(__dirname, "views"));
-app.engine("handlebars", exphbs({defaultLayout: "main"}));
-app.set("view engine", "handlebars");
+app.set("views", "./app/views");
+app.engine("handlebars", exphbs({extname:".handlebars"}));
+app.set("view engine", ".handlebars")
 
+app.use(session({secret:"dtmcat", resave: true, saveUninitialized:true})); //session secret
+app.use(passport.initialize());
+app.use(passport.session()); //persistent login sessions
 
-var PORT = 4242;
+var env = require("dotenv").load();
 
-var db = require("./models");
+var models = require("./app/models");
 
-db.sequelize.sync({force:true}).then(function() {
-    app.listen(process.env.PORT || PORT, function () {
-        console.log("Server listening on: http://localhost: " + PORT)
-    });
-})
+//routes
+var authRoute = require("./app/routes/auth.js")(app);
+
+require("./app/config/passport/passport.js")
+
+models.sequelize.sync().then(function() {
+    console.log("Database is all gravy");
+}).catch(function(err) {
+    console.log(err, "Something went wrong with the Database Update...")
+});
 
