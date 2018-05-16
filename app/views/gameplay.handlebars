@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    {{#each css}}
+        <link rel="stylesheet" href="/css/{{this}}">
+    {{/each}}
+</head>
+<body>
+
+<div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4">Math Time!!!!</h1>
+            <p class="lead">Get ready for some math kids. Whoop! Whoop!</p>
+        </div>
+    </div>
+
+    <div class="container ">
+        <button class="btn btn-primary" onclick=ResetGame() value="New Game" type="button">New Game </button>
+        <button class="btn btn-primary" onclick=StartGame() value="Start game" type="button">Start Game</button>
+        <button class="btn btn-primary" onclick=StopGame() value="Stop game" type="button">Stop Game</button>
+    </div>
+
+    <br>
+
+
+
+    <form name=frmdta>
+        <div class="form-group">
+            <label for="exampleFormControlSelect1" onclick="if (gamestart){alert('Not during a game.  \nStop the game first.   ');}">Choose Difficulty</label>
+            <select class="form-control" id="exampleFormControlSelect1" name=diff>
+                <option value=10 setting="Easy">Easy (Ages x-x)</option>
+                <option value=20 setting="Medium">Medium (Ages x-x)</option>
+                <option value=50 setting="Hard">Hard (Ages x-x)</option>
+                <option value=100 setting="Expert">Expert (Ages x-x)</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="exampleFormControlSelect1" onclick="if (gamestart){alert('Not during a game.  \nStop the game first.   ');}">Choose Operation
+                <label>
+                    <select class="form-control" name=func>
+                        </br>
+                        <option value=Add.>Addition (ages x-x)</option>
+                        <option value=Subt.>Subtraction (ages x-x)</option>
+                        <option alue=Mult.>Multiplication (ages x-x)</option>
+                        <option value="Rnd ±">Random (+ and -) (ages x-x)</option>
+                        <option value="Rnd All">Random all (+, -, and x)(ages x-x)</option>
+                    </select>
+        </div>
+
+
+
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Question</h5>
+                <div class=Question id=Q1>;</div>
+                <div class=Sign id=Sign>;</div>
+                <div class=Question id=Q2>;</div>
+                <p class="card-text">What do you think it is??????</p>
+            </div>
+        </div>
+
+        <table class="table table-dark">
+            <thead>
+                <tr>
+                    <th scope="col" class=Answer id=Ans1>;</th>
+                    <th scope="col" class=Answer id=Ans2>;</th>
+                    <th scope="col" class=Answer id=Ans3>;</th>
+                    <th scope="col" class=Answer id=Ans4>;</th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+                <th scope="row">
+                    <input id=A1 onclick=guessThis(this.guess) type=button value="Answer A" guess="">
+                </th>
+                <th scope="row">
+                    <input id=A2 onclick=guessThis(this.guess) type=button value="Answer B" guess="">
+                </th>
+                <th scope="row">
+                    <input id=A3 onclick=guessThis(this.guess) type=button value="Answer C" guess="">
+                </th>
+                <th scope="row">
+                    <input id=A4 onclick=guessThis(this.guess) type=button value="Answer D" guess="">
+                </th>
+
+            </tbody>
+        </table>
+
+
+        <table class="table table-dark ">
+
+            <tr>
+                <td>
+                    <div class=Answer id=Response></div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <b>Player scoring:</b>
+                </td>
+            </tr>
+            <tr>
+                <td>id:</td>
+                <td>
+                    <div class=Answer id=Player>;</div>
+                </td>
+            </tr>
+            <tr>
+                <td>Correct:</td>
+                <td>
+                    <div class=Answer id=Correct>0</div>
+                </td>
+            </tr>
+            <tr>
+                <td>Incorrect:</td>
+                <td>
+                    <div class=Answer id=Missed>0</div>
+                </td>
+            </tr>
+            <tr>
+                <td>Accuracy:</td>
+                <td>
+                    <div class=Answer id=Accuracy>0%</div>
+                </td>
+            </tr>
+
+        </table>
+
+
+
+        <table class="table table-dark ">
+            <tr>
+                <th>Loggedscores </th>
+            </tr>
+            <tr>
+                <td>
+                    <div class=Logged id=LoggedName>
+                        <u>Name</u>
+                        <br>
+                    </div>
+                </td>
+                <td>
+                    <div class=Logged id=LoggedDiff>
+                        <u>Difficulty</font>
+                        </u>
+                        <br>
+                    </div>
+                </td>
+                <td>
+                    <div class=Logged id=LoggedAcc>
+                        <u>Accuracy</font>
+                        </u>
+                        <br>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+    {{{body}}}
+    {{#each js}}
+        <script src="/js/{{this}}"></script>
+    {{/each}}
+</body>
+</html>
