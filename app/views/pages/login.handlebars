@@ -2,34 +2,33 @@
 <html>
 
 <head>
-    <title></title>
+  <title></title>
 </head>
 
 <body>
-  <div class ="modal-dialogue text-center">
-    <div class = "col-sm-8 main-section">
-      <div class ="modal-content">
+  <div class="modal-dialogue text-center">
+    <div class="col-sm-8 main-section">
+      <div class="modal-content">
 
-        <div class ="col-12 user-img">
-          <img src = "../public/assets/face.png">
+        <div class="col-12">
+
+
+          <form id="login" name="login" method="post" action="login">
+            <label for="email">Email Address</label>
+            <input class="text" name="email" type="text" />
+            <label for="password">Password</label>
+            <input name="password" type="password" />
+            <input class="btn" type="submit" value="Sign In" />
+          </form>
+
+          <div class="col-12 forgot">
+            <a href="#">Forgot Password?</a>
+          </div>
+
         </div>
 
-        <form id="login" name="login" method="post" action="login">
-        <label for="email">Email Address</label>
-        <input class="text" name="email" type="text" />
-        <label for="password">Password</label>
-        <input name="password" type="password" />
-        <input class="btn" type="submit" value="Sign In" />
-    </form>
-
-        <div class ="col-12 forgot">
-          <a href="#">Forgot Password?</a>
-        </div>
-
-      </div> 
-
+      </div>
     </div>
-  </div>
 
 </body>
 
