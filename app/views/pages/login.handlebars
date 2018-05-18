@@ -3,6 +3,13 @@
 
 <head>
   <title></title>
+    <title></title>
+     <!--<link rel="stylesheet" href="{{css}}"> -->
+       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css">
+
+  <link rel="stylesheet" type="text/css" href="/css/styles.css">
 </head>
 
 <body>
@@ -12,6 +19,30 @@
 
         <div class="col-12">
 
+        <div class ="col-12 user-img">
+          <img src = "/assets/face.png">
+        </div>
+
+      <form class="col-12" id="login" name="login" method="post" action="login" >
+            <h1> Do The Math</h1>
+            <label for = "email"> Email Address</label>
+            <input class ="text" name="email" type="text"/>
+            <br>
+            <br>
+            <label for = "password">Password</label>
+            <input name ="password" type="password"/>
+            <br>
+            <br>
+            <input class = "btn" type="submit" value="Sign In" />
+            </form>
+          <!--<div class ="form-group">
+            <input type="text" class="form-control" placeholder="Enter User Name">
+          </div>
+          <div class ="form-group">
+            <input type="password" class="form-control" placeholder="Enter Password">
+          </div>
+          <button type ="submit" class="btn"><i class="fas fa-sign-in-alt"></i>Login</button>
+        </form> -->
 
           <form id="login" name="login" method="post" action="login">
             <label for="email">Email Address</label>
@@ -30,6 +61,11 @@
       </div>
     </div>
 
+  </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
 </body>
 
 </html>
