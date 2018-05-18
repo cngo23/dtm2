@@ -29,12 +29,11 @@ app.set("views", "./app/views/")
 app.set("view engine", "handlebars");
 
 //main routing file
-let routes = require('./app/routes/gameroute');
+
+
+let routes = require('./app/routes/routes');
 app.use(routes);
-let loginroutes = require('./app/routes/login');
-app.use(loginroutes);
-let signuproutes = require('./app/routes/signup');
-app.use(signuproutes);
+
 //setting pssport authentication steps
 app.use(session({secret:"dtmcat", resave: true, saveUninitialized:true})); //session secret
 app.use(passport.initialize());
@@ -49,24 +48,6 @@ models.sequelize.sync({force:true}).then(function() {
 }).catch(function(err) {
    console.log(err, "Something went wrong with the Database Update...")
 });
-
-// var controllers = require("./app/controllers");
-// app.use(session({secret:"dtmcat", resave: true, saveUninitialized:true})); //session secret
-// app.use(passport.initialize());
-// app.use(passport.session()); 
-
-// require("./app/routes/auth")(app, passport);
-
-// require("./app/config/passport/passport")(passport, models.user);
-
-// models.sequelize.sync({force:true}).then(function() {
-//     console.log("Database is all gravy");
-// }).catch(function(err) {
-//     console.log(err, "Something went wrong with the Database Update...")
-// });
-
-// // var controllers = require("./app/controllers");
-
 
 app.listen(PORT, function () {
     console.log("Server listening on: http://localhost:" + PORT);
