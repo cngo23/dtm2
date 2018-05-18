@@ -9,12 +9,8 @@ var router = express.Router();
 //     res.render('gameplay', links);
 // })
 
-router.get('/gameplay', function(req, res){
-    let css = '/css/gameplay.css';
-    let js = '/js/gameplay.js';
-    let links = {css: css, js: js}
-    res.render('gameplay', links);
-});
+
+
 
 
 module.exports = router;

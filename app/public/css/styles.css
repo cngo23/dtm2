@@ -9,6 +9,8 @@ font-family:"Roboto", sans-serif;
     background-color: #25a890;
 }
 
+
+
 body {
     font-family: "Roboto", sans-serif;
     background: url(../assets/numbers.jpg) no-repeat center center fixed;
@@ -56,21 +58,32 @@ h2{
     box-shadow: 0px 0px 2px #848484;
 }
 
-.form-group{
+#login{
     margin-bottom: 25px;
 }
 
-.form-group input{
+#login input{
     height:42px;
     border-radius: 5px;
     border: 0;
     font-size: 18px;
-    padding-left: 54px;
+    padding-left: 60px;
+    position:center;
+    margin-left:20px;
 }
 
-.form-group::before{
-    font-family:"Font Awesome\ 5 Free";
-    content: "\f007";
+label{
+    color: #f5e12a;
+    margin: 0 auto;
+    font-size:20px;
+  
+  
+
+}
+
+
+
+#login::before{
     position: absolute;
     font-size: 22px;
     color:#848484;
@@ -79,22 +92,16 @@ h2{
 
 }
 
-.form-group:last-of-type::before{
-    content: "\f023";
-}
-
-button{
-    width:40%;
-    margin: 5px 0 25px;
-}
-
 .btn{
     background-color: #f5e12a;
     color: #007f96;
     font-size: 19px;
+   
     padding: 7px 14px;
     border-radius: 5px;
     border-bottom: 4px solid #219882;
+    width:40%;
+    margin: 5px 0 25px;
 }
 
 .btn:hover, .btn:focus {

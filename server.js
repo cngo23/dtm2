@@ -29,26 +29,25 @@ app.set("views", "./app/views/")
 app.set("view engine", "handlebars");
 
 //main routing file
-let routes = require('./app/routes/gameroute');
+
+
+let routes = require('./app/routes/routes');
 app.use(routes);
 
 //setting pssport authentication steps
-// app.use(session({secret:"dtmcat", resave: true, saveUninitialized:true})); //session secret
-// app.use(passport.initialize());
-// app.use(passport.session()); 
+app.use(session({secret:"dtmcat", resave: true, saveUninitialized:true})); //session secret
+app.use(passport.initialize());
+app.use(passport.session()); 
 
-// require("./app/routes/auth")(app, passport);
+require("./app/routes/auth")(app, passport);
 
-// require("./app/config/passport/passport")(passport, models.user);
+require("./app/config/passport/passport")(passport, models.user);
 
-// models.sequelize.sync({force:true}).then(function() {
-//     console.log("Database is all gravy");
-// }).catch(function(err) {
-//     console.log(err, "Something went wrong with the Database Update...")
-// });
-
-// var controllers = require("./app/controllers");
-
+models.sequelize.sync({force:true}).then(function() {
+   console.log("Database is all gravy");
+}).catch(function(err) {
+   console.log(err, "Something went wrong with the Database Update...")
+});
 
 app.listen(PORT, function () {
     console.log("Server listening on: http://localhost:" + PORT);
