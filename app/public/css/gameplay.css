@@ -1,6 +1,27 @@
-.card {
+
+body {
+    background-image: url("/assets/dots.png");
+  
+
+ }.card {
     margin:auto;
     width: 20em;
     background-color: blue
     
+    }
+
+    .jumbotron {
+        margin-bottom: 0px;
+        background-image: url(/assets/schoolback.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+       
+ 
+    }
+
+    h1.display-4 {
+        color: rgb(248, 138, 11);
+        text-shadow: black 0.3em 0.3em 0.3em;
+        font-size:   5em;
+        font-weight: bolder; 
     }

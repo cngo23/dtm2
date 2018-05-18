@@ -18,7 +18,7 @@ var env = require("dotenv").load();
 
 var models = require("./app/models");
 
-// var controllers = require("./app/controllers");
+
 
 // Static directory
 app.use(express.static('app/public'));
@@ -36,21 +36,36 @@ app.use(loginroutes);
 let signuproutes = require('./app/routes/signup');
 app.use(signuproutes);
 //setting pssport authentication steps
-//app.use(session({secret:"dtmcat", resave: true, saveUninitialized:true})); //session secret
-//app.use(passport.initialize());
-//app.use(passport.session()); 
+app.use(session({secret:"dtmcat", resave: true, saveUninitialized:true})); //session secret
+app.use(passport.initialize());
+app.use(passport.session()); 
 
-//require("./app/routes/auth")(app, passport);
+require("./app/routes/auth")(app, passport);
 
-//require("./app/config/passport/passport")(passport, models.user);
+require("./app/config/passport/passport")(passport, models.user);
 
-//models.sequelize.sync({force:true}).then(function() {
-   // console.log("Database is all gravy");
-//}).catch(function(err) {
-//    console.log(err, "Something went wrong with the Database Update...")
-//});
+models.sequelize.sync({force:true}).then(function() {
+   console.log("Database is all gravy");
+}).catch(function(err) {
+   console.log(err, "Something went wrong with the Database Update...")
+});
 
-//var controllers = require("./app/controllers");
+var controllers = require("./app/controllers");
+app.use(session({secret:"dtmcat", resave: true, saveUninitialized:true})); //session secret
+app.use(passport.initialize());
+app.use(passport.session()); 
+
+require("./app/routes/auth")(app, passport);
+
+require("./app/config/passport/passport")(passport, models.user);
+
+models.sequelize.sync({force:true}).then(function() {
+    console.log("Database is all gravy");
+}).catch(function(err) {
+    console.log(err, "Something went wrong with the Database Update...")
+});
+
+var controllers = require("./app/controllers");
 
 
 app.listen(PORT, function () {
