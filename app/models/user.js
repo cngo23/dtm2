@@ -7,12 +7,12 @@ module.exports = function(sequelize, DataTypes) {
             autoIncrement: true,
             primaryKey: true,
         },
-        firstname: {
+        name: {
             type: DataTypes.STRING,
             notEmpty: true
         },
-        lastname: {
-            type: DataTypes.STRING,
+        age: {
+            type: DataTypes.INTEGER,
             notEmpty: true
         },
         email: {

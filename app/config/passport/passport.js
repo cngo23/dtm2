@@ -30,8 +30,8 @@ module.exports = function (passport, user) {
                         var data = {
                             email: email,
                             password: userPassword,
-                            firstname: req.body.firstname,
-                            lastname: req.body.lastname
+                            name: req.body.name,
+                            age: req.body.age
                         };
 
                         User.create(data).then(function (newUser, created) {
@@ -73,7 +73,7 @@ module.exports = function (passport, user) {
                     message: "Email does not exist"
                 });
             }
-            if(!isValidPassword(user.password, password)) {
+            if(!isValidPass(user.password, password)) {
                 return done(null, false, {
                     message: "Incorrect password"
                 });

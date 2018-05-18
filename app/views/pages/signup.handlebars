@@ -17,9 +17,8 @@
 
         
 
-        <form class="col-12">
-            <h1>Do The Math</h1>
-            <h2>Sign Up</h2>
+        {{!-- <form class="col-12">
+            
           <div class ="form-group">
             <input type="text" class="form-control" placeholder="Enter Name">
           </div>
@@ -33,7 +32,21 @@
             <input type="password" class="form-control" placeholder="Enter Desired Password">
           </div>
           <button type ="submit" class="btn"><i class="fas fa-sign-in-alt"></i>Create Account</button>
-        </form>
+        </form> --}}
+
+        <form id="signup" name="signup" method="post" action="/signup">
+        <h1>Do The Math</h1>
+            <h2>Sign Up</h2>
+        <label for="name">Child's Name</label>
+        <input name="name" type="text" />
+        <label for="age">Child's Age</label>
+        <input name="age" type="text" />
+        <label for="email">Email Address</label>
+        <input class="text" name="email" type="email" />
+        <label for="password">Desired Password</label>
+        <input name="password" type="password" />
+        <input class="btn" type="submit" value="Sign Up" />
+    </form>
 
        
 
