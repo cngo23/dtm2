@@ -30,8 +30,8 @@ module.exports = function (passport, user) {
                         var data = {
                             email: email,
                             password: userPassword,
-                            name: req.body.name,
-                            age: req.body.age
+                            firstname: req.body.firstname,
+                            lastname: req.body.lastname
                         };
 
                         User.create(data).then(function (newUser, created) {
