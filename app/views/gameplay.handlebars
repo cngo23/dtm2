@@ -23,52 +23,51 @@
     </div>
 
     <div class="container ">
-        <button class="btn btn-primary" onclick=ResetGame() value="New Game" type="button">New Game </button>
-        <button class="btn btn-primary" onclick=StartGame() value="Start game" type="button">Start Game</button>
-        <button class="btn btn-primary" onclick=StopGame() value="Stop game" type="button" id= "stopgame" name= "stopgame" method = "POST" action = "stopgame">Stop Game</button>
+        <button class="btn btn-primary btn-lg" onclick=ResetGame() value="New Game" type="button">New Game </button>
+        <button class="btn btn-primary btn-lg" onclick=StartGame() value="Start game" type="button">Start Game</button>
+        <button class="btn btn-primary btn-lg" onclick=StopGame() value="Stop game" type="button" id= "stopgame" name= "stopgame" method = "POST" action = "stopgame">Stop Game</button>
     </div>
 
     <br>
 
 
-
-    <form name=frmdta>
-        <div class="form-group">
-            <label for="exampleFormControlSelect1" onclick="if (gamestart){alert('Not during a game.  \nStop the game first.   ');}">Choose Difficulty</label>
-            <select class="form-control" id="exampleFormControlSelect1" name=diff>
-                <option value=10 setting="Easy">Easy (Ages x-x)</option>
-                <option value=20 setting="Medium">Medium (Ages x-x)</option>
-                <option value=50 setting="Hard">Hard (Ages x-x)</option>
-                <option value=100 setting="Expert">Expert (Ages x-x)</option>
-            </select>
-        </div>
-
-        <div class="form-group">
-            <label for="exampleFormControlSelect1" onclick="if (gamestart){alert('Not during a game.  \nStop the game first.   ');}">Choose Operation
-                <label>
-                    <select class="form-control" name=func>
+    <div class="form-container">
+        <form name=frmdta>
+            <div class="form-group">
+                <label for="exampleFormControlSelect1" onclick="if (gamestart){alert('Not during a game.  \nStop the game first.   ');}">Choose Difficulty
+                    <select class="form-control" id="exampleFormControlSelect1" name=diff>
+                        <option value=10 setting="Easy">Easy (Ages x-x)</option>
+                        <option value=20 setting="Medium">Medium (Ages x-x)</option>
+                        <option value=50 setting="Hard">Hard (Ages x-x)</option>
+                        <option value=100 setting="Expert">Expert (Ages x-x)</option>
+                    </select>
+            </div>
+    
+            <div class="form-group">
+                <label for="exampleFormControlSelect1" onclick="if (gamestart){alert('Not during a game.  \nStop the game first.   ');}">Choose Operation
+                    <select class="form-control" name=func id=funcform>
                         </br>
                         <option value=Add.>Addition (ages x-x)</option>
                         <option value=Subt.>Subtraction (ages x-x)</option>
-                        <option alue=Mult.>Multiplication (ages x-x)</option>
+                        <option value=Mult.>Multiplication (ages x-x)</option>
                         <option value="Rnd ±">Random (+ and -) (ages x-x)</option>
                         <option value="Rnd All">Random all (+, -, and x)(ages x-x)</option>
                     </select>
-        </div>
+            </div>
+    </div>
 
 
 
-        <div class="card">
-            <div class="card-body">
+        <div class="card bg-primary">
+            <div class="card-body ">
                 <h5 class="card-title">Question</h5>
-                <div class=Question id=Q1>;</div>
-                <div class=Sign id=Sign>;</div>
-                <div class=Question id=Q2>;</div>
-                <p class="card-text">What do you think it is??????</p>
+                <div class=Question id=Q1>X</div>
+                <div class=Sign id=Sign>?</div>
+                <div class=Question id=Q2>X</div>
             </div>
         </div>
 
-        <table class="table table-dark">
+        <table class="answers table table-dark">
             <thead>
                 <tr>
                     <th scope="col" class=Answer id=Ans1>;</th>
