@@ -35,9 +35,17 @@ text-shadow: .3em rgb(27, 11, 248)
 }
 
 
+
+/* .answers {
+
+
+    margin:auto;
+    font-size:1em;
+    } */
+
 .card{
 margin:auto;
-font-size: 4em;
+font-size: 1em;
 text-align: center;
 background-image: url(/assets/suppliesback.jpg);
 background-size: cover;
@@ -46,9 +54,11 @@ width : 10em;
 height: 6em
 }
 
+
+
     
-.form-group {
-margin-left: 10em;
+.form-container {
+    margin: auto;
 }
 
 
@@ -56,20 +66,8 @@ margin-left: 10em;
 background-size: cover;
 background-repeat: no-repeat;
 background-image: url(/assets/chalkback.jpg);
-width : 10em;
-height: 17em
+/* width : 10em;
+height: 17em */
 }
 
 
-.answers {
-
-    width: 10em;
-    height: 5em;
-    margin:auto;
-    /* background-image: url(/assets/handsback.jpg); */
-    /* background-size: cover; */
-    /* background-repeat: no-repeat;
-    object-fit: fill; */
-    /* background-size: contain; */
-    
-    }
