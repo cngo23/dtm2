@@ -14,7 +14,7 @@ function ResetGame() {
     // name = document.getElementsById("studentname")[0].value;
     // var name = document.getElementById("studentname")[0].value;
 
-}
+
     name = prompt("Who Are You", "");
     if (name == "") { alert("Please enter your name or click on 'Cancel'.   "); ResetGame(); }
     else if (name == "null") { return; }

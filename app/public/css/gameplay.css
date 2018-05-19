@@ -43,12 +43,24 @@ font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 
+
+/* .answers {
+
+
+    margin:auto;
+    font-size:1em;
+    } */
+
 .card{
 margin:auto;
+<<<<<<< HEAD
 font-size: 6em;
 color:#25a890;
 font-weight:bold;
 font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+=======
+font-size: 1em;
+>>>>>>> 8b62e79a508a1addb73818adf543a11afa652ad8
 text-align: center;
 background-image: url(../assets/whitebackground.png);
 background-size: cover;
@@ -58,6 +70,7 @@ height: 7em
 
 }
 
+<<<<<<< HEAD
 .card-body{
  
 }
@@ -67,12 +80,20 @@ height: 7em
 margin-left: 10em;
 font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 
+=======
+
+
+    
+.form-container {
+    margin: auto;
+>>>>>>> 8b62e79a508a1addb73818adf543a11afa652ad8
 }
 
 
 .table {
     margin-top:10px;
 background-size: cover;
+<<<<<<< HEAD
 background-color: #25a890 !important;
 width : 10em;
 height: 17em
@@ -94,3 +115,12 @@ font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     /* background-size: contain; */
     
     }
+=======
+background-repeat: no-repeat;
+background-image: url(/assets/chalkback.jpg);
+/* width : 10em;
+height: 17em */
+}
+
+
+>>>>>>> 8b62e79a508a1addb73818adf543a11afa652ad8

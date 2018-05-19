@@ -1,50 +1,58 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title></title>
-        <link rel="stylesheet" href="{{css}}">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
-    crossorigin="anonymous">
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
-    crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
-    crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{{css}}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
+        crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
+        crossorigin="anonymous"></script>
 
 </head>
+
 <body>
 
-<div class="jumbotron jumbotron-fluid">
+    <div class="jumbotron jumbotron-fluid">
         <div class="container">
-            {{!-- <h1 class="display-4">Math Time!!!!</h1>
+            {{!--
+            <h1 class="display-4">Math Time!!!!</h1>
             <p class="lead">Get ready for some math kids. Whoop! Whoop!</p> --}}
         </div>
     </div>
+<<<<<<< HEAD
     
     <div class="container ">
+=======
+
+    <div class="container buttonlist ">
+>>>>>>> 8b62e79a508a1addb73818adf543a11afa652ad8
         <button class="btn btn-primary btn-lg" onclick=ResetGame() value="New Game" type="button">New Game </button>
         <button class="btn btn-primary btn-lg" onclick=StartGame() value="Start game" type="button">Start Game</button>
-        <button class="btn btn-primary btn-lg" onclick=StopGame() value="Stop game" type="button" id= "stopgame" name= "stopgame" method = "POST" action = "stopgame">Stop Game</button>
+        <button class="btn btn-primary btn-lg" onclick=StopGame() value="Stop game" type="button" id="stopgame" name="stopgame" method="POST"
+            action="stopgame">Stop Game</button>
     </div>
 
     <br>
 
-<div class=" studentlist">
-<div class="form-check">
-  <input class="form-check-input" type="radio" studentname="student1" onclick=ResetGame() id="student1" value="student1" >
-  <label class="form-check-label" for="Radios1">
-    Timmy
-  </label>
-</div>
-<div class="form-check">
-  <input class="form-check-input" type="radio" studentname="student2" onclick=ResetGame() id="student2" value="student2">
-  <label class="form-check-label" for="Radios2">
-    Jimbo
-  </label>
-</div>
-</div>
-
+    <div class=" studentlist">
+        <div class="form-check">
+            <input class="form-check-input" type="radio" studentname="student1" onclick=ResetGame() id="student1" value="student1">
+            <label class="form-check-label" for="Radios1">
+                Timmy
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" studentname="student2" onclick=ResetGame() id="student2" value="student2">
+            <label class="form-check-label" for="Radios2">
+                Jimbo
+            </label>
+        </div>
+    </div>
 
     <div class="form-container">
         <form name=frmdta>
@@ -57,7 +65,7 @@
                         <option value=100 setting="Expert">Expert (Ages x-x)</option>
                     </select>
             </div>
-    
+
             <div class="form-group">
                 <label for="exampleFormControlSelect1" onclick="if (gamestart){alert('Not during a game.  \nStop the game first.   ');}">Choose Operation
                     <select class="form-control" name=func id=funcform>
@@ -69,18 +77,20 @@
                         <option value="Rnd All">Random all (+, -, and x)(ages x-x)</option>
                     </select>
             </div>
+        </form>
     </div>
 
 
 
-        <div class="card bg-primary">
-            <div class="card-body ">
-                <h5 class="card-title">Question</h5>
-                <div class=Question id=Q1>X</div>
-                <div class=Sign id=Sign>?</div>
-                <div class=Question id=Q2>X</div>
-            </div>
+
+    <div class="card bg-primary">
+        <div class="card-body ">
+            <h5 class="card-title">Question</h5>
+            <div class=Question id=Q1>X</div>
+            <div class=Sign id=Sign>?</div>
+            <div class=Question id=Q2>X</div>
         </div>
+
 
         <table class="answers table table-dark">
             <thead>
@@ -109,82 +119,84 @@
 
             </tbody>
         </table>
+    </div>
 
 
-        <table class="table table-dark ">
+    <table class="table table-dark ">
 
-            <tr>
-                <td>
-                    <div class=Answer id=Response></div>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <b>Player scoring:</b>
-                </td>
-            </tr>
-            <tr>
-                <td>id:</td>
-                <td>
-                    <div class=Answer id=Player>;</div>
-                </td>
-            </tr>
-            <tr>
-                <td>Correct:</td>
-                <td>
-                    <div class=Answer id=Correct>0</div>
-                </td>
-            </tr>
-            <tr>
-                <td>Incorrect:</td>
-                <td>
-                    <div class=Answer id=Missed>0</div>
-                </td>
-            </tr>
-            <tr>
-                <td>Accuracy:</td>
-                <td>
-                    <div class=Answer id=Accuracy>0%</div>
-                </td>
-            </tr>
+        <tr>
+            <td>
+                <div class=Answer id=Response></div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <b>Player scoring:</b>
+            </td>
+        </tr>
+        <tr>
+            <td>id:</td>
+            <td>
+                <div class=Answer id=Player>;</div>
+            </td>
+        </tr>
+        <tr>
+            <td>Correct:</td>
+            <td>
+                <div class=Answer id=Correct>0</div>
+            </td>
+        </tr>
+        <tr>
+            <td>Incorrect:</td>
+            <td>
+                <div class=Answer id=Missed>0</div>
+            </td>
+        </tr>
+        <tr>
+            <td>Accuracy:</td>
+            <td>
+                <div class=Answer id=Accuracy>0%</div>
+            </td>
+        </tr>
 
-        </table>
+    </table>
 
 
 
-        <table class="table table-dark ">
-            <tr>
-                <th>Loggedscores </th>
-            </tr>
-            <tr>
-                <td>
-                    <div class=Logged id=LoggedName>
-                        <u>Name</u>
-                        <br>
-                    </div>
-                </td>
-                <td>
-                    <div class=Logged id=LoggedDiff>
-                        <u>Difficulty</font>
-                        </u>
-                        <br>
-                    </div>
-                </td>
-                <td>
-                    <div class=Logged id=LoggedAcc>
-                        <u>Accuracy</font>
-                        </u>
-                        <br>
-                    </div>
-                </td>
-            </tr>
-            </tbody>
-    {{{body}}}
- 
+    <table class="table table-dark ">
+        <tr>
+            <th>Loggedscores </th>
+        </tr>
+        <tr>
+            <td>
+                <div class=Logged id=LoggedName>
+                    <u>Name</u>
+                    <br>
+                </div>
+            </td>
+            <td>
+                <div class=Logged id=LoggedDiff>
+                    <u>Difficulty</font>
+                    </u>
+                    <br>
+                </div>
+            </td>
+            <td>
+                <div class=Logged id=LoggedAcc>
+                    <u>Accuracy</font>
+                    </u>
+                    <br>
+                </div>
+            </td>
+        </tr>
+        </tbody>
+        {{{body}}}
+
         <script src="{{js}}"></script>
-    
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
-<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+        <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
 </body>
+
 </html>

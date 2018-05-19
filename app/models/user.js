@@ -1,6 +1,6 @@
 module.exports = function(sequelize, DataTypes) {
  
-    var User = sequelize.define('user', {
+    var user = sequelize.define('user', {
 
         user_id: {
             type: DataTypes.INTEGER,
@@ -36,10 +36,17 @@ module.exports = function(sequelize, DataTypes) {
             type: DataTypes.DATE(),
             defaultValue: sequelize.literal('NOW()'),
         },
- 
- 
     });
+
+    user.associate = function(models) {
+        user.hasMany(models.students, {
+            foreignKey: {
+                allowNull: false
+              }
+        }
+        )
+    }
  
-    return User;
+    return user;
  
 }
