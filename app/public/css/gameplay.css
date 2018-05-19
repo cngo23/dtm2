@@ -1,18 +1,20 @@
 
 body {
-    background-image: url("/assets/stripes.jpg");
+   /* background-image: url("/assets/stripes.jpg");*/
+   background-image: url(/assets/fadenumbers.png);
  }
-
 
 
 .jumbotron-fluid {
     height: 8em;
     margin-bottom: 0px;
-    background-image: url(/assets/mathbal.png);
+    background-image: url(../assets/numbers.jpg);
+    height:90px;
     /* background-size: cover; */
     background-position: center center;
-    background-size: 100% 100%;
+  
     background-repeat: no-repeat;
+    
     
 }
 
@@ -26,38 +28,55 @@ font-weight: bolder;
 
 .btn {
 margin-right: 9em;
+
+background-color: #25a890 !important;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+
 }
 
 label {
-color: rgb(49, 15, 201);
-font-size: 3em;
-text-shadow: .3em rgb(27, 11, 248)
+color: #25a890;
+font-size: 2em;
+text-shadow: .3em #f5e12a;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 
 .card{
 margin:auto;
-font-size: 4em;
+font-size: 6em;
+color:#25a890;
+font-weight:bold;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 text-align: center;
-background-image: url(/assets/suppliesback.jpg);
+background-image: url(../assets/whitebackground.png);
 background-size: cover;
 background-repeat: no-repeat;
-width : 10em;
-height: 6em
+width : 8em;
+height: 7em
+
 }
 
-    
+.card-body{
+ 
+}
+
+
 .form-group {
 margin-left: 10em;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
 }
 
 
 .table {
+    margin-top:10px;
 background-size: cover;
-background-repeat: no-repeat;
-background-image: url(/assets/chalkback.jpg);
+background-color: #25a890 !important;
 width : 10em;
 height: 17em
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 
@@ -66,6 +85,8 @@ height: 17em
     width: 10em;
     height: 5em;
     margin:auto;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
     /* background-image: url(/assets/handsback.jpg); */
     /* background-size: cover; */
     /* background-repeat: no-repeat;
