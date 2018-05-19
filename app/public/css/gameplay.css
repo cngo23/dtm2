@@ -1,27 +1,75 @@
 
 body {
-    background-image: url("/assets/dots.png");
-  
+    background-image: url("/assets/stripes.jpg");
+ }
 
- }.card {
-    margin:auto;
-    width: 20em;
-    background-color: blue
+
+
+.jumbotron-fluid {
+    height: 8em;
+    margin-bottom: 0px;
+    background-image: url(/assets/mathbal.png);
+    /* background-size: cover; */
+    background-position: center center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
     
-    }
+}
 
-    .jumbotron {
-        margin-bottom: 0px;
-        background-image: url(/assets/schoolback.png);
-        background-size: cover;
-        background-repeat: no-repeat;
-       
- 
-    }
+/* h1.display-4 {
+color: rgb(248, 138, 11);
+text-shadow: black 0.3em 0.3em 0.3em;
+font-size:   5em;
+font-weight: bolder; 
+} */
 
-    h1.display-4 {
-        color: rgb(248, 138, 11);
-        text-shadow: black 0.3em 0.3em 0.3em;
-        font-size:   5em;
-        font-weight: bolder; 
+
+.btn {
+margin-right: 9em;
+}
+
+label {
+color: rgb(49, 15, 201);
+font-size: 3em;
+text-shadow: .3em rgb(27, 11, 248)
+}
+
+
+.card{
+margin:auto;
+font-size: 4em;
+text-align: center;
+background-image: url(/assets/suppliesback.jpg);
+background-size: cover;
+background-repeat: no-repeat;
+width : 10em;
+height: 6em
+}
+
+    
+.form-group {
+margin-left: 10em;
+}
+
+
+.table {
+background-size: cover;
+background-repeat: no-repeat;
+background-image: url(/assets/chalkback.jpg);
+width : 10em;
+height: 17em
+}
+
+
+.answers {
+
+    width: 10em;
+    height: 5em;
+    margin:auto;
+    /* background-image: url(/assets/handsback.jpg); */
+    /* background-size: cover; */
+    /* background-repeat: no-repeat;
+    object-fit: fill; */
+    /* background-size: contain; */
+    
     }

@@ -8,8 +8,14 @@ RightComments = new Array("Good Job!", "I knew you could do it!", "You're doing 
 WrongComments = new Array("Thats Wrong, Try again! ", " Nope! Try Again!", " Not the right answer, try again!",
     "That was a tough one, try again");
 
+  
+
 function ResetGame() {
-    name = prompt("New Game!", "");
+    // name = document.getElementsById("studentname")[0].value;
+    // var name = document.getElementById("studentname")[0].value;
+
+}
+    name = prompt("Who Are You", "");
     if (name == "") { alert("Please enter your name or click on 'Cancel'.   "); ResetGame(); }
     else if (name == "null") { return; }
 

@@ -29,7 +29,9 @@ app.set("views", "./app/views/")
 app.set("view engine", "handlebars");
 
 //main routing file
-let routes = require('./app/routes/gameroute');
+
+
+let routes = require('./app/routes/routes');
 app.use(routes);
 
 //setting pssport authentication steps
@@ -42,13 +44,10 @@ app.use(routes);
 // require("./app/config/passport/passport")(passport, models.user);
 
 // models.sequelize.sync({force:true}).then(function() {
-//     console.log("Database is all gravy");
+//    console.log("Database is all gravy");
 // }).catch(function(err) {
-//     console.log(err, "Something went wrong with the Database Update...")
+//    console.log(err, "Something went wrong with the Database Update...")
 // });
-
-// var controllers = require("./app/controllers");
-
 
 app.listen(PORT, function () {
     console.log("Server listening on: http://localhost:" + PORT);
