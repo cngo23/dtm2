@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,7 +19,7 @@
 </head>
 
 <body>
-    <div="mainContainer">
+    <div class="mainContainer container">
         <div class="row biggirl">
 
             <div class="col">
@@ -36,8 +37,15 @@
 
                 <div id="content">
                     <div class="text-center" id="details">
-                        <button class="btn login">log in</button>
-                        <button class="btn signup">Sign up</button>
+                        <form class="col-12" id="loginh" name="login" method="post" action="login">
+                            <input class="btn btn-primary btn-lg btn-block" type="submit" value="Log In" />
+                        </form>
+
+                        <br>
+
+                        <form id="signuph" name="signup" method="post" action="signup">
+                            <input class="btn btn-primary btn-lg btn-block" type="submit" value="Sign Up" />
+                        </form>
                     </div>
                 </div>
             </div>
