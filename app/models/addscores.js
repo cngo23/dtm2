@@ -14,5 +14,13 @@ module.exports = function (sequelize, DataTypes) {
 
   })
 
+  addscore.associate = function (models) {
+    addscore.hasMany(models.students, {
+        foreignKey: {
+            allowNull: false
+          }
+    })
+}
+
   return addscore;
 }

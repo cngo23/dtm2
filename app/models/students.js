@@ -24,5 +24,29 @@ module.exports = function (sequelize, DataTypes) {
         })
     }
 
+    student.associate = function (models) {
+        student.belongsTo(models.addscores, {
+            foreignKey: {
+                allowNull: false
+              }
+        })
+    }
+
+    student.associate = function (models) {
+        student.belongsTo(models.subscores, {
+            foreignKey: {
+                allowNull: false
+              }
+        })
+    }
+
+    student.associate = function (models) {
+        student.belongsTo(models.multscores, {
+            foreignKey: {
+                allowNull: false
+              }
+        })
+    }
+
     return student;
 }
