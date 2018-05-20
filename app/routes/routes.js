@@ -24,21 +24,11 @@ router.get('/signup', function(req, res){
     let links = {css: css, js: js}
     res.render('gameplay', links);
 });
-router.get('/dashboard', function(req, res){
-    res.render("../views/dashboard")
-});
-
 
 router.get('/home', function(req, res){
     res.render('index');
 })
 
-
-
-
 module.exports = router;
 
-
-//app.get('public\css\gameplay.css', function(req, res){ res.send('public\css\gameplay.css'); res.end(); });
-//app.get('public\js\gameplay.js', function(req, res){ res.send('public\js\gameplay.js'); res.end(); });
 
