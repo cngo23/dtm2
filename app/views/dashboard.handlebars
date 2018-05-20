@@ -1,11 +1,182 @@
-<h1>Dashboard</h1>
-<div class="row">
-    <div class="col-md-12">
-        <form action="/logout" method="GET">
-            <button type="submit">
-                Logout
-            </button>
-        </form>
-    </div>
-</div>
-    
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
+        crossorigin="anonymous">
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
+            crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+        <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css">
+        <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
+            crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
+            crossorigin="anonymous"></script>
+        <style>
+        </style>
+    </head>
+
+    <body>
+
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <h1 id="header">
+                        <d>DO</d>
+                        <i>THE</i>
+                        <b>MATH</b>
+                    </h1>
+                </div>
+                <ul class="nav navbar-nav">
+                    <li class="active">
+                        <a href="#">Home</a>
+                    </li>
+                    <li>
+                        <a href="#">Logout</a>
+                    </li>
+
+                </ul>
+                
+                <div class="row">
+                    <div class="col-md-12">
+                        <form action="/logout" method="GET">
+                            <button type="submit">
+                                Logout
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </nav>
+        <div class="container">
+
+            <div class="col">
+                <div class="row bigboi">
+                    <div class="col-6">
+
+                        <div class="card p-4">
+
+
+                            <a href="/curriculum">
+                                <h4 class="card-header">Curriculum Overview</h4>
+                            </a>
+
+
+                            <div class="card-body">
+
+
+
+                                <p class="card-text">Find out about our curriculum and what your child can learn on dothemath</p>
+
+
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-6">
+                        <div class="card p-4">
+                            <div class="card-body">
+                                <form>
+                                    <div class="form-group">
+                                        <label for="nameInput">Student Name</label>
+                                        <input type="name" class="form-control" id="nameInput" aria-describedby="namehelp" placeholder="Enter Student Name">
+
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="ageInput">Age</label>
+                                        <input type="age" class="form-control" id="ageInput" placeholder="Age">
+                                    </div>
+
+                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                </form>
+
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 mt-4">
+                        <div class="card p-4">
+                            <div class="card-body">
+                                <a href="/Settings">
+                                    <h4 class="card-header">Settings</h4>
+                                </a>
+                                <p class="card-text">Customerize user settings to match your preference</p>
+
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 mt-4">
+                        <div class="card p-4">
+                            <div class="card-body">
+                                <form id="addstudent" class="button-size">
+                                    <p>
+                                        <textarea type="text" name="student"></textarea>
+
+                                    </p>
+                                    <p>
+                                        <button type="submit" id="btnSubmit" class="btn btn-success">Take the Quiz!
+                                        </button>
+
+                                    </p>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 mt-4">
+                        <div id="progress" class="card p-4">
+                            <div class="card-body">
+                                <a href="/Progress Track">
+                                    <h4 class="card-header">Progress Tracker</h4>
+                                </a>
+                                <p class="card-text">Follow each users's progress and accomplishments as he or she completes learning Activities
+
+
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+
+            <div class="col mt-4">
+                <div class="row">
+                    <div class="card">
+                        <div class="card-body">
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+
+
+
+
+
+    </body>
+
+    </html>

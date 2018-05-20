@@ -24,6 +24,10 @@ router.get('/signup', function(req, res){
     let links = {css: css, js: js}
     res.render('gameplay', links);
 });
+router.get('/dashboard', function(req, res){
+    res.render("../views/pages/dashboard")
+});
+
 
 
 module.exports = router;
