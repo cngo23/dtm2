@@ -25,7 +25,7 @@ router.get('/signup', function(req, res){
     res.render('gameplay', links);
 });
 router.get('/dashboard', function(req, res){
-    res.render("../views/pages/dashboard")
+    res.render("../views/dashboard")
 });
 
 
