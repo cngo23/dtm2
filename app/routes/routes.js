@@ -24,21 +24,17 @@ router.get('/signup', function(req, res){
     let links = {css: css, js: js}
     res.render('gameplay', links);
 });
-router.get('/dashboard', function(req, res){
-    res.render("../views/pages/dashboard")
-});
-
 
 router.get('/home', function(req, res){
     res.render('index');
 })
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> c13b16ca79158b255fc24f46eb7110e966e3c9e9
 
 module.exports = router;
 
-
-//app.get('public\css\gameplay.css', function(req, res){ res.send('public\css\gameplay.css'); res.end(); });
-//app.get('public\js\gameplay.js', function(req, res){ res.send('public\js\gameplay.js'); res.end(); });
 
