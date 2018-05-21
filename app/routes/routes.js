@@ -29,6 +29,12 @@ router.get('/dashboard', function(req, res){
 });
 
 
+router.get('/home', function(req, res){
+    res.render('index');
+})
+
+
+
 
 module.exports = router;
 
