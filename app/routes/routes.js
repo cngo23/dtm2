@@ -28,12 +28,9 @@ router.get('/signup', function(req, res){
 router.get('/home', function(req, res){
     res.render('index');
 })
-<<<<<<< HEAD
 
 
 
-=======
->>>>>>> c13b16ca79158b255fc24f46eb7110e966e3c9e9
 
 module.exports = router;
 

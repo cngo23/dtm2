@@ -1,38 +1,23 @@
-
 body {
-   /* background-image: url("/assets/stripes.jpg");*/
    background-image: url(/assets/fadenumbers.png);
  }
 
-
+th {
+    height: 1em;
+}
 .jumbotron-fluid {
     height: 8em;
     margin-bottom: 0px;
     background-image: url(../assets/numbers.jpg);
     height:90px;
-    /* background-size: cover; */
     background-position: center center;
-  
-    background-repeat: no-repeat;
-    
-    
+    background-repeat: no-repeat;  
 }
-
-/* h1.display-4 {
-color: rgb(248, 138, 11);
-text-shadow: black 0.3em 0.3em 0.3em;
-font-size:   5em;
-font-weight: bolder; 
-} */
-
 
 .btn {
 margin-right: 9em;
-
 background-color: #25a890 !important;
 font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-
-
 }
 
 label {
@@ -43,84 +28,26 @@ font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 
-
-/* .answers {
-
-
-    margin:auto;
-    font-size:1em;
-    } */
-
 .card{
 margin:auto;
-<<<<<<< HEAD
-font-size: 6em;
-color:#25a890;
-font-weight:bold;
-font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-=======
 font-size: 1em;
->>>>>>> 8b62e79a508a1addb73818adf543a11afa652ad8
 text-align: center;
 background-image: url(../assets/whitebackground.png);
 background-size: cover;
 background-repeat: no-repeat;
-width : 8em;
-height: 7em
-
-}
-
-<<<<<<< HEAD
-.card-body{
- 
-}
-
-
-.form-group {
-margin-left: 10em;
-font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-
-=======
-
-
-    
-.form-container {
-    margin: auto;
->>>>>>> 8b62e79a508a1addb73818adf543a11afa652ad8
+width : 30em;
+height: 10em;
+margin-bottom: 10em;
 }
 
 
 .table {
-    margin-top:10px;
 background-size: cover;
-<<<<<<< HEAD
 background-color: #25a890 !important;
 width : 10em;
-height: 17em
+
 font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 
-.answers {
 
-    width: 10em;
-    height: 5em;
-    margin:auto;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    
-    /* background-image: url(/assets/handsback.jpg); */
-    /* background-size: cover; */
-    /* background-repeat: no-repeat;
-    object-fit: fill; */
-    /* background-size: contain; */
-    
-    }
-=======
-background-repeat: no-repeat;
-background-image: url(/assets/chalkback.jpg);
-/* width : 10em;
-height: 17em */
-}
-
-
->>>>>>> 8b62e79a508a1addb73818adf543a11afa652ad8
