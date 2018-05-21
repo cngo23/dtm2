@@ -4,11 +4,11 @@ const router = express.Router();
 
 var db = require("../models");
 
-router.get("/", function (req,res) {
+app.get("/", function (req,res) {
     res.redirect("/dashboard")
 });
 
-router.get("/dashboard", function (req, res) {
+app.get("/dashboard", function (req, res) {
     db.student.findAll({}).then(function (data) {
         var hbsObject = {students: data };
         res.render("dashboard", hbsObject);
@@ -22,6 +22,9 @@ console.log(req.body);
         age: req.body.age
     }).then(function (data) {
         res.redirect("/dashboard")
+    }).catch(function(err) {
+        console.log("saving student unsuccessful");
+            console.log(err)
     });
 });
 
