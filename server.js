@@ -18,6 +18,8 @@ var env = require("dotenv").load();
 
 var models = require("./app/models");
 
+var db = require("./app/models")
+
 
 
 // Static directory

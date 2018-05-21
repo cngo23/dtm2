@@ -1,28 +1,36 @@
 const express = require("express");
+const app = express();
 const router = express.Router();
-const student = require("../models/user.js");
+
+var db = require("../models");
 
 router.get("/", function (req,res) {
-    res.redirect("/students")
+    res.redirect("/dashboard")
 });
 
-router.get("/students", function (req, res) {
-    student.all(function (data) {
+router.get("/dashboard", function (req, res) {
+    db.student.findAll({}).then(function (data) {
         var hbsObject = {students: data };
-        res.render("index", hbsObject);
+        res.render("dashboard", hbsObject);
     });
 })
 
-router.post("/students/add", function (req, res) {
-    students.create(req.body.student_name, function () {
-        res.redirect("/student")
+app.post("/dashboard/addstud", function (req, res) {
+console.log(req.body);
+    db.student.create({
+        name: req.body.name,
+        age: req.body.age
+    }).then(function (data) {
+        res.redirect("/dashboard")
     });
-})
+});
 
-router.post("/student/delete/:id", function (req, res) {
-    students.delete(req.params.id, function () {
-        res.redirect("/students")
-    })
-})
+// router.post("/student/delete/:id", function (req, res) {
+//     students.delete(req.params.id, function () {
+//         res.redirect("/dashboard")
+//     })
+// })
+
+
 
 module.exports = router;
