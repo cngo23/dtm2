@@ -13,9 +13,9 @@ module.exports = function(sequelize, DataTypes){
 
     multscore.associate = function (models) {
       multscore.hasMany(models.students, {
-          foreignKey: {
-              allowNull: false
-            }
+          // foreignKey: {
+          //     allowNull: false
+          //   }
       })
   }
   

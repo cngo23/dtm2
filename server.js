@@ -45,7 +45,7 @@ require("./app/routes/auth")(app, passport);
 
 require("./app/config/passport/passport")(passport, models.user);
 
-models.sequelize.sync({force:true}).then(function() {
+models.sequelize.sync().then(function() {
    console.log("Database is all gravy");
 }).catch(function(err) {
    console.log(err, "Something went wrong with the Database Update...")

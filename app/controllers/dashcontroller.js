@@ -20,6 +20,7 @@ console.log(req.body);
     db.student.create({
         name: req.body.name,
         age: req.body.age
+
     }).then(function (data) {
         res.redirect("/dashboard")
     }).catch(function(err) {

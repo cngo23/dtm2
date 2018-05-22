@@ -40,9 +40,9 @@ module.exports = function(sequelize, DataTypes) {
 
     user.associate = function(models) {
         user.hasMany(models.students, {
-            foreignKey: {
-                allowNull: false
-              }
+            // foreignKey: {
+            //     allowNull: false
+            //   }
         }
         )
     }

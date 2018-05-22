@@ -13,9 +13,9 @@ module.exports = function(sequelize, DataTypes){
 
     subscore.associate = function (models) {
       subscore.hasMany(models.students, {
-          foreignKey: {
-              allowNull: false
-            }
+          // foreignKey: {
+          //     allowNull: false
+          //   }
       })
   }
   

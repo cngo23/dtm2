@@ -83,45 +83,25 @@
                     <div class="col-6">
                         <div class="card p-4">
                             <div class="card-body">
-                                {{!-- <form id="addchild" action="/dashboard/addstud" method="POST">
-                                    <div class="form-group">
-                                        <label for="nameInput">Student Name</label>
-                                        <input name="name" class="form-control" id="nameInput" aria-describedby="namehelp" placeholder="Enter Student Name">
 
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="ageInput">Age</label>
-                                        <input name="age" class="form-control" id="ageInput" placeholder="Age">
-                                    </div>
-
-                                    <button type="submit" class="btn btn-primary">Submit</button>
-                                </form> --}}
-
-                                {{!-- <form id="addchild" action="/dashboard/addstud" method="POST">
-                                    <div class="input-group mb-3">
-                                        <input name="name" class="form-control" placeholder="New Students Go Here" aria-label="student adds" aria-describedby="basic-addon2">
-                                        <div class="input-group-append">
-                                            <button class="btn btn-success" type="submit">Register</button>
-                                        </div>
-                                    </div>
-                                </form> --}}
-
-<form id="addstud" name="students" method="post" action="/dashboard/addstud">
+                                <form>
 
 
-            <label for="name"> Name</label>
-            <input id="nameInput" name="name" placeholder="Enter your Name" type="text" />
+                                    <label for="name"> Name</label>
+                                    <input id="nameInput" name="name" placeholder="Enter your Name" type="text" />
 
-            <label for="age">age</label>
-            <input id="ageInput" name="age" placeholder="Enter your Age" type="integer" />
+                                    <label for="age">age</label>
+                                    <input id="ageInput" name="age" placeholder="Enter your Age" type="integer" />
 
-            <input class="btn" type="submit" id="addchild" />
-          </form>
+                                    <button class="btn" type="submit" id="addsome">Add child</button>
+                                </form>
 
 
                             </div>
                         </div>
                     </div>
+
+
                     <div class="col-6 mt-4">
                         <div class="card p-4">
                             <div class="card-body">
@@ -134,23 +114,29 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-6 mt-4">
-                        <div class="card p-4">
-                            <div class="card-body">
-                                <form id="addstudent" class="button-size">
-                                    <p>
-                                        <textarea type="text" name="student"></textarea>
-
-                                    </p>
-                                    <p>
-                                        <button type="submit" id="btnSubmit" class="btn btn-success">Take the Quiz!
-                                        </button>
-
-                                    </p>
-                                </form>
+                    <div class="col-md-6 mt-4" id="studentDisplay">
+                        <div class="card mb-1 text-center">
+                            <h4>Students Registered</h4>
+                            <div class="card-body p-1">
+                                <ul class="list-group">
+                                    {{#each students}}
+                                    <div class="listItem p-2">
+                                        <form class="studForm">
+                                            <li class="list-group-item">
+                                                <span class="available">{{name}}</span>
+                                                <input type="hidden" name="delete" value="true">
+                                                <button class="btn btn-danger btn-sm float-right" type="submit">Play Game</button>
+                                            </li>
+                                        </form>
+                                    </div>
+                                    {{/each}}
+                                </ul>
                             </div>
                         </div>
                     </div>
+
+
+
                     <div class="col-6 mt-4">
                         <div id="progress" class="card p-4">
                             <div class="card-body">
@@ -185,9 +171,10 @@
 
 
 
-<script src="../public/js/dash.js">
+        <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+        <script src="/js/dash.js">
 
-</script>
+        </script>
 
 
 
