@@ -28,6 +28,9 @@
             crossorigin="anonymous"></script>
         <style>
         </style>
+
+        <style ref=""></style>
+
     </head>
 
     <body>
@@ -119,11 +122,11 @@
                             <h4>Students Registered</h4>
                             <div class="card-body p-1">
                                 <ul class="list-group">
-                                    {{#each students}}
+                                    {{#each student}}
                                     <div class="listItem p-2">
                                         <form class="studForm">
                                             <li class="list-group-item">
-                                                <span class="available">{{name}}</span>
+                                                <span class="available">{{student}}</span>
                                                 <input type="hidden" name="delete" value="true">
                                                 <button class="btn btn-danger btn-sm float-right" type="submit">Play Game</button>
                                             </li>
@@ -134,7 +137,6 @@
                             </div>
                         </div>
                     </div>
-
 
 
                     <div class="col-6 mt-4">

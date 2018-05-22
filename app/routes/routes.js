@@ -49,8 +49,11 @@ router.get("/student", function (req, res) {
     db.students.findAll({
 
     }).then(function(data) {
-        // res.json(data)
-        res.render("dashboard", {students: students.dataValues})
+        res.json(data)
+        console.log("*******************")
+        console.log(data)
+        console.log("*******************")
+        res.render("dashboard", {student: data.student.dataValues})
         
     })
 })
